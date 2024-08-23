@@ -1,6 +1,5 @@
-// given a matrix if an element in the matrix is 0 then you will have to set its entire column and row to 0 and then return the matrix?
-#include <vector>
 #include <iostream>
+#include <vector>
 using namespace std;
 void setZeroes(vector<vector<int>> &matrix)
 {
@@ -35,24 +34,35 @@ void setZeroes(vector<vector<int>> &matrix)
     }
 }
 
-void printMatrix(const vector<vector<int>> &matrix)
+void printMatrix(const std::vector<std::vector<int>> &matrix)
 {
-    for (const auto &row : matrix)
+    int rows = matrix.size();
+    int cols = matrix[0].size();
+
+    for (int i = 0; i < rows; i++)
     {
-        for (int val : row)
+        for (int j = 0; j < cols; j++)
         {
-            cout << val << " ";
+            cout << matrix[i][j] << " ";
         }
-        cout << endl;
+        cout << std::endl;
     }
 }
 
 int main()
 {
-    vector<vector<int>> matrix = {
-        {1, 1, 1},
-        {1, 0, 1},
-        {1, 1, 1}};
+    int rows, cols;
+    cin >> rows >> cols;
+
+    vector<std::vector<int>> matrix(rows, vector<int>(cols));
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            cin >> matrix[i][j];
+        }
+    }
 
     cout << "Original Matrix:" << endl;
     printMatrix(matrix);
