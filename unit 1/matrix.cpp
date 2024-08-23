@@ -45,7 +45,7 @@ void printMatrix(const std::vector<std::vector<int>> &matrix)
         {
             cout << matrix[i][j] << " ";
         }
-        cout << std::endl;
+        cout << endl;
     }
 }
 
