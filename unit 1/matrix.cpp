@@ -34,7 +34,7 @@ void setZeroes(vector<vector<int>> &matrix)
     }
 }
 
-void printMatrix(const std::vector<std::vector<int>> &matrix)
+void printMatrix(const vector<vector<int>> &matrix)
 {
     int rows = matrix.size();
     int cols = matrix[0].size();
@@ -54,7 +54,7 @@ int main()
     int rows, cols;
     cin >> rows >> cols;
 
-    vector<std::vector<int>> matrix(rows, vector<int>(cols));
+    vector<vector<int>> matrix(rows, vector<int>(cols));
 
     for (int i = 0; i < rows; i++)
     {
