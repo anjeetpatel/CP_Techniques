@@ -31,4 +31,3 @@ int main(){
     sieve(n);
     return 0;
 }
-//complexity = O(nlog(logn))
