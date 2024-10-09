@@ -6,16 +6,19 @@ int main(){
     cout << "Enter a positive integer: ";
     cin >> n;
 
-    if (n % 2 == 0)
-    {
-        cout << "The number of ways to tile a " << n << "x2 board is " << n / 2 + 1 << "." << endl;
-    }
-    else
-    {
-        cout << "The number of ways to tile a " << n << "x2 board is " << (n + 1) / 2 << "." << endl;
-    }
+    if(n==1)
+    return 1;
+    if(n==2)
+    return 2;
 
-    return 0;
+    int arr[n+1];
+    arr[1]=1;
+    arr[2]=2;
+
+    for(int i=3;i<=n;i++){
+        arr[i]=arr[i-1]+arr[i-2];
+    }
+    return arr[n];
 }
 // Output:
 // Enter a positive integer: 5
