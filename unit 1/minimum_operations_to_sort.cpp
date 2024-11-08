@@ -1,12 +1,9 @@
 //you have a binary string S of length N. In one operation uou can select any substring of S and reverse it. You have to find the minimum number of operations required to make the string S sorted. 
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <string>
-
 using namespace std;
-
 int minOperationsToSort(string S)
 {
     int N = S.length();
@@ -15,7 +12,6 @@ int minOperationsToSort(string S)
     {
         sorted[i] = i;
     }
-
     int operations = 0;
     for (int i = 0; i < N; i++)
     {
@@ -31,10 +27,8 @@ int minOperationsToSort(string S)
             i = j - 1;
         }
     }
-
     return operations;
 }
-
 int main()
 {
     string S;
