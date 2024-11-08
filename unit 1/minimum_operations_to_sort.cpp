@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 using namespace std;
+
 int minOperationsToSortBinaryString(const string &S)
 {
     int count0Groups = 0;
@@ -21,6 +22,7 @@ int minOperationsToSortBinaryString(const string &S)
     }
     return min(count0Groups, count1Groups);
 }
+
 int main()
 {
     string S;
